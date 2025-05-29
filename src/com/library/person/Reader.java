@@ -1,18 +1,17 @@
 package com.library.person;
 
-import java.time.LocalDate;
-import java.util.Map;
+import java.util.Scanner;
 
 public class Reader extends Person {
-        private int borrowedBooksCount;
+    private int borrowedBooksCount;
 
-    public Reader(String id, String firstName, String lastName, String email, String password, int borrowedBooksCount) {
+    public Reader(long id, String firstName, String lastName, String email, String password, int borrowedBooksCount) {
         super(id, firstName, lastName, email, password);
         this.borrowedBooksCount = borrowedBooksCount;
     }
 
     @Override
-        public String whoYouAre() {
+        public String whoYouAre(Scanner scanner) {
             return "Library User";
         }
 

@@ -1,16 +1,19 @@
 package com.library.person;
 
-import java.time.LocalDate;
+import java.util.Scanner;
 
 public abstract class Person { //Reader ve Librarian persondan türetlecek
-   private String id;
+   private long id;
    private String firstName;
    private String lastName;
    private String email;
    private String password; //ikiside üye olmalı
+   public Person(long id, String firstname, String lastname){
+
+   }
 
 
-   public Person(String id, String firstName, String lastName, String email, String password) {
+   public Person(long id, String firstName, String lastName, String email, String password) {
       this.id = id;
       this.firstName = firstName;
       this.lastName = lastName;
@@ -19,7 +22,7 @@ public abstract class Person { //Reader ve Librarian persondan türetlecek
 
    }
 
-   public String getId() {
+   public long getId() {
       return id;
    }
 
@@ -40,7 +43,7 @@ public abstract class Person { //Reader ve Librarian persondan türetlecek
    }
 
 
-   public void setId(String id) {
+   public void setId(long id) {
       this.id = id;
    }
 
@@ -59,5 +62,5 @@ public abstract class Person { //Reader ve Librarian persondan türetlecek
    public void setEmail(String email) {
       this.email = email;
    }
-   public abstract String whoYouAre(); // subclasslarda bunu override ederek personun typeini yazacağız
+   public abstract String whoYouAre(Scanner scanner); // subclasslarda bunu override ederek personun typeini yazacağız
 }
